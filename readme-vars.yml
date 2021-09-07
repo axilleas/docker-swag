@@ -88,6 +88,7 @@ app_setup_block: |
   >   * If you don't want to or can't use the option `--remove-orphans`, then you can first do `docker-compose down`, then edit the compose yaml as above, and then issue `docker-compose up -d`
 
   > Make sure to also update any references to this container by name. For instance, Nextcloud's `config.php` references this container in its `trusted_proxies` directive, which would have to be updated to `swag`.
+
   ### Validation and initial setup
   * Before running this container, make sure that the url and subdomains are properly forwarded to this container's host, and that port 443 (and/or 80) is not being used by another service on the host (NAS gui, another webserver, etc.).
   * For `http` validation, port 80 on the internet side of the router should be forwarded to this container's port 80
